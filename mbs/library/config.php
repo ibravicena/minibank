@@ -3,7 +3,7 @@
 	$host = "localhost";
 	$user ="root";
 	$pas  ="";
-	$db   ="apg";
+	$db   ="mbs";
 
 // membuat koneksi ke database dengan konfigurasi di atas
 	$con = mysqli_connect($host,$user,$pas,$db);

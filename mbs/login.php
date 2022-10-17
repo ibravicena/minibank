@@ -11,8 +11,8 @@
         <section class="login-box">
             <h2>Login Apk MBS Subulul Huda</h2>
             <form action="ceklogin.php" method="post">
-                <input type="text" placeholder="Username" id="username" name= "username">
-                <input type="password" placeholder="Password" id="password" name= "password"> 
+                <input type="text" placeholder="Username" id="username" name= "username" value="admin">
+                <input type="password" placeholder="Password" id="password" name= "password" value="admin"> 
                 <input type="submit" value="Login">
             </form>
         </section>

@@ -3,7 +3,7 @@
 ?>
 
 <h2 class="judul">Data Nasabah</h2>
-<a class="tombol" href="?hal=pegawai-tambah">tambah</a>
+<a class="tombol" href="?hal=nasabah-tambah">tambah</a>
 
 <table class="table">
 	<thead>
@@ -19,7 +19,12 @@
 	</thead>
 	<tbody>
 		<?php
-		$query = mysqli_query($con,"SELECT * FROM pegawai LEFT JOIN jns_tab ON pegawai . id_tab=jns_tab . id_tab ORDER BY pegawai . id_pegawai DESC");
+		$sql = "SELECT * 
+				FROM nasabah nas
+				LEFT JOIN tabungan tab ON tab.id_tabungan = nas.id_tabungan 
+				ORDER BY nas.nama_nasabah";
+		$query = mysqli_query($con, $sql);
+
 		$no = 0;
 		while ($data = mysqli_fetch_array($query)) {
 			$no++;
@@ -30,10 +35,10 @@
 				<td><?= $data['nama_nasabah']?></td>
 				<td><?= $data['jenis_kelamin']?></td>
 				<td><?= $data['tgl_lahir']?></td>
-				<td><?= $data['jenis_tabungan']?></td>
+				<td><?= $data['jns_tabungan']?></td>
 				<td>
-					<a class="tombol edit" href="?hal=nasabah_edit&id=<?= $data['id_pegawai']?>">Edit</a>
-					<a class="tombol hapus" href="?hal=nasabah_edit&id=<?= $data['id_pegawai']?>">Hapus</a>
+					<a class="tombol edit" href="?hal=nasabah-edit&id=<?= $data['id_nasabah']?>">Edit</a>
+					<a class="tombol hapus" href="?hal=nasabah_hapus&id=<?= $data['id_nasabah']?>">Hapus</a>
 				</td>
 			</tr>
 <?php

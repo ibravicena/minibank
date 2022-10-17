@@ -29,6 +29,7 @@
 			<ul class="menu">
 				<li><a href="?hal=dashboard" class="aktif">Dashboard</a></li>
 				<li><a href="?hal=costumer-servive">Costumer Service</a></li>
+				<li><a href="?hal=nasabah">Nasabah</a></li>
 				<li><a href="?hal=teller">Teller</a></li>
 				<li><a href="?hal=histori-transaksi">Histori Transaksi</a></li>
 				<li><a href="logout.php">Keluar</a></li>
