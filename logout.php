@@ -1,8 +1,13 @@
-<?php 
-		session_start();
-		session_destroy();
+<?php
+session_start();
+unset($_SESSION['idtabsis']);
+unset($_SESSION['usertabsis']);
+unset($_SESSION['passtabsis']);
+unset($_SESSION['namatabsis']);
+unset($_SESSION['telepontabsis']);
+unset($_SESSION['pototabsis']);
 
-		echo "<p align='center'>Anda telah logout!</p>"; 
-		echo"<meta http-equiv='refresh' content='2;url=login.php'>";
+echo "<script>window.location='../'</script>";
+//session_destroy();
 
 ?>
