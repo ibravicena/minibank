@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,6 +38,7 @@ if ($ketemu>0) {
 	$_SESSION['namatabsis'] = $b['nama'];
 	$_SESSION['telepontabsis'] = $b['telepon'];
 	$_SESSION['pototabsis'] = $b['foto'];
+	$_SESSION['level'] = "admin";
 	header("location: index.php?m=awal");
 
 }else{

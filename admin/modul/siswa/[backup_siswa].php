@@ -241,7 +241,7 @@ if (isset($_POST['edit'])) {
     <small class="form-text text-muted">Masukkan nama</small>
   </div>
   <div class="form-group">
-    <label>Kelas</label>
+    <label>Jenis Tabungan</label>
     <input type="text" class="form-control" aria-describedby="emailHelp" name="jns_tab" value="<?= $key['jns_tab'];?>" placeholder="Masukkan jenis tabungan">
     <small id="emailHelp" class="form-text text-muted">Masukkan Jenis Tabungan</small>
   </div>

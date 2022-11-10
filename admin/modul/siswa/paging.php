@@ -126,7 +126,7 @@ foreach ($data_nasabah as $key):
 
                                                 
 
-  foreach ($hasil as $jenis):
+  foreach ($hasil as $jns_tab):
                                                     
                                                      
 

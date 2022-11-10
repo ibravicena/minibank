@@ -309,35 +309,23 @@ function tambah_setoran(){
 	$setoran = $_POST['setoran'];
 	$saldo = $_POST['saldo'];
 	$saldo_akhir = $saldo + $setoran;
+ $query =  "UPDATE tb_nas SET saldo = '$saldo_akhir' WHERE id = '$id'";
+		 mysqli_query($koneksi, $query);
 	$query =  "INSERT INTO tb_tran(no_rek, nama, jns_tab, tanggal, setoran, penarikan, saldo) 
 						VALUES('$id', '$nama', '$jns_tab', '$tanggal', '$setoran', 0, '$saldo_akhir')";
-
+						
+					
 
 	$res = mysqli_query($koneksi, $query);
 	if(!$res) die(mysqli_error($koneksi).'|'.$query);
 
-
-
-	header("location: index.php?m=tabungan&s=print&no_rek=$id");
+	if ($query) {
+		header("location: index.php?m=tabungan&s=print&no_rek=$id");
+	}else{
+		echo "gagal";
+	}
 }
-	// // Penambahan saldo
-	// $tambah_saldo = $saldo + $setoran;
 
-	// //cek id siswa
-	// $tambah = mysqli_query($koneksi, "SELECT * FROM tb_tran WHERE no_rek='$id");
-	// $row = mysqli_fetch_row($tambah);
-
-	// if ($row) {
-	// 	$query = mysqli_query($koneksi, "UPDATE tb_tran SET  no_rek = '$id', nama='$nama', jns_tab='$jns_tab', tanggal='$tanggal', setoran='$setoran', penarikan=0, saldo='$tambah_saldo' WHERE id_tran='$id_tran'");
-	// 	header("location: index.php?m=tabungan&s=print&no_rek=$id");
-	// }else{
-
-// 	if ($query) {
-		
-// 	}else{
-// 		echo "gagal";
-// 	}
-// }
 
 // Penarikan saldo
 function penarikan_saldo(){
@@ -353,7 +341,7 @@ function penarikan_saldo(){
 	$saldo_akhir = $saldo - $penarikan;
 
 
-	$query =  "UPDATE tb_nas SET saldo = '$saldo' WHERE id = '$id'";
+ $query =  "UPDATE tb_nas SET saldo = '$saldo_akhir' WHERE id = '$id'";
 		 mysqli_query($koneksi, $query);
 	$query =  "INSERT INTO tb_tran(no_rek, nama, jns_tab, tanggal, setoran, penarikan, saldo) 
 						VALUES('$id', '$nama', '$jns_tab', '$tanggal', 0, '$penarikan', '$saldo_akhir')";

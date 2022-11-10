@@ -152,13 +152,13 @@ Transaksi</a></li>
 
                                                 
 
-  foreach ($hasil as $kelas):
+  foreach ($hasil as $jns_tab):
                                                     
                                                      
 
    ?>
 
-  <option value="<?php echo $kelas['jns_tab'];?>"><?php echo $kelas['jns_tab']; ?></option>
+  <option value="<?php echo $jns_tab['jns_tab'];?>"><?php echo $jns_tab['jns_tab']; ?></option>
    <?php endforeach; ?>
                                                    
   </select>

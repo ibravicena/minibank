@@ -7,7 +7,6 @@ require 'fungsi/fungsi.php';
 <head>
 	  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="vendors/img/logo.png">
 <link rel="stylesheet" href="<?= url() ?>vendors/css/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="<?= url() ?>vendors/css/font-awesome.min.css">
@@ -93,7 +92,7 @@ require 'fungsi/fungsi.php';
 				<h5>Tanda Tangan</h5>
 				<h5>Yang Bersangkutan</h5>
 				<br><br><br>
-				<h5>Penyetor</h5>
+				<h5>Nasabah</h5>
 			</div>
 
 	<script>
